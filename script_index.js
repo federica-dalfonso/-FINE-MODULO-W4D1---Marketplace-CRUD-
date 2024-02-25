@@ -1,8 +1,8 @@
-// * URL & KEY
+// URL & KEY
 const apiUrl = "https://striveschool-api.herokuapp.com/api/product/";
 const key = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWQ0N2NkNTljNDM3MDAwMTkzYzM1ODUiLCJpYXQiOjE3MDg0MjQ0MDYsImV4cCI6MTcwOTYzNDAwNn0.7pnEfFyaGWnzxrpyVW2Q-zGhuVQsje_3xVCns5XUuXA"
 
-//NODE UTILE:
+// NODE UTILE:
 let productRow = document.getElementById("productSection"); 
 
 
@@ -10,7 +10,6 @@ let productRow = document.getElementById("productSection");
 window.onload = getProducts();
 
 async function getProducts () {
-    // ! implementa innerHTML per svuotare e ripopolare la row
     try {
         let result = await fetch(apiUrl, { headers: {"Authorization": key} });
         let json = await result.json();
@@ -60,7 +59,8 @@ function createCards ( { name, brand, description, imageUrl, price, _id }) {
     let linkTo = document.createElement("a");
     linkTo.classList.add("product-page-link");
     linkTo.innerText = "Dettagli prodotto";
-    linkTo.href = `/details.html?id=${_id}`; // todo search params with ID!
+    linkTo.target = "_blank";
+    linkTo.href = `/details.html?id=${_id}`;
 
     productCard.appendChild(cardBody);
     cardBody.appendChild(cardTitle);

@@ -85,7 +85,7 @@ async function getProducts() {
         try {
             let result = await fetch(apiUrl, { headers: {"Authorization": key} });
             let json = await result.json();
-            if (document.querySelector(".list-group-item")) { //! controllo per evitare che duplichi tutti gli el quando viene richiamata da POST
+            if (document.querySelector(".list-group-item")) { //controllo per evitare che duplichi tutti gli el quando viene richiamata da POST
                 tableParent.innerHTML = "";
             }
             json.forEach(prod => {
@@ -115,7 +115,7 @@ function createTable(prod) {
     let btnID = idCounter;
     idCounter++;
 
-    //!bottone di modifica + funzione collapse
+    //bottone di modifica + funzione collapse
     let buttonModify = document.createElement("button");
     buttonModify.classList.add("modify-button", "me-3");
     buttonModify.setAttribute("data-bs-toggle", "collapse");
@@ -130,7 +130,7 @@ function createTable(prod) {
     tableParent.appendChild(createCollapse(prod, btnID)); //richiamo la funzione che crea il corpo del collapse 
     
     let putBtn = document.getElementById(`modify${btnID}button`); // catturo il btn creato dalla funzione    
-    putBtn.addEventListener("click", function takeValues() {       //! catturo i valori correnti degli input
+    putBtn.addEventListener("click", function takeValues() {       // catturo i valori correnti degli input
         let modifyDetails = {
             "name": document.getElementById(`name${btnID}input`).value,
             "brand": document.getElementById(`brand${btnID}input`).value,
@@ -231,7 +231,7 @@ function createCollapse (prod, btnID) {
     priceInput.value = prod.price;
     priceCol.appendChild(priceInput);
 
-    //todo bottone MODIFICA:
+    //bottone MODIFICA:
     let btnCol = document.createElement("div");
     btnCol.classList.add("col-4");
     inputRow.appendChild(btnCol);
@@ -243,10 +243,10 @@ function createCollapse (prod, btnID) {
     btnCol.appendChild(saveModify);
     let spanModify = document.createElement("span");
     spanModify.classList.add("p-2");
-    spanModify.innerText = "Conferma modifiche";
+    spanModify.innerText = "Conferma";
     saveModify.appendChild(spanModify);
 
-    //todo bottone ANNULLA:
+    //bottone ANNULLA:
     let btnCol2 = document.createElement("div");
     btnCol2.classList.add("col-4");
     inputRow.appendChild(btnCol2);

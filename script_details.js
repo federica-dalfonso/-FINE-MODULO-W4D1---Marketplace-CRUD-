@@ -1,4 +1,4 @@
-//URL pagina dettagli: 
+//URL: 
 let urlProduct = "https://striveschool-api.herokuapp.com/api/product/";
 const key = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWQ0N2NkNTljNDM3MDAwMTkzYzM1ODUiLCJpYXQiOjE3MDg0MjQ0MDYsImV4cCI6MTcwOTYzNDAwNn0.7pnEfFyaGWnzxrpyVW2Q-zGhuVQsje_3xVCns5XUuXA"
 
