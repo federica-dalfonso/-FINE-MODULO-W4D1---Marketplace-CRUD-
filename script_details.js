@@ -15,7 +15,7 @@ let productDetails;
 
 window.onload = getDetails();
 
-//* fetch sul prodotto specifico:
+//* fetch prodotto specifico:
 async function getDetails () {
     spinner.classList.toggle("d-none");
     try {
@@ -28,7 +28,7 @@ async function getDetails () {
     }
 };
 
-//* funzione che crea la card dettagli:
+//* funzione che crea card dettagli:
 function moreDetails({ name, brand, description, imageUrl, price}) {
     spinner.classList.toggle("d-none");
     let imageBox = document.getElementById("imageProduct");

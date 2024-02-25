@@ -21,6 +21,7 @@ async function getProducts () {
     }
 } 
 
+//funzione che crea cards:
 function createCards ( { name, brand, description, imageUrl, price, _id }) {    
 
     let productCol = document.createElement("div");

@@ -85,7 +85,7 @@ async function getProducts() {
         try {
             let result = await fetch(apiUrl, { headers: {"Authorization": key} });
             let json = await result.json();
-            if (document.querySelector(".list-group-item")) { //controllo per evitare che duplichi tutti gli el quando viene richiamata da POST
+            if (document.querySelector(".list-group-item")) { //controllo duplicazione el quando viene richiamata da POST
                 tableParent.innerHTML = "";
             }
             json.forEach(prod => {
