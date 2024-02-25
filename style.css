@@ -1,0 +1,173 @@
+/*
+background ##FEFEFE
+main #09b1c8 - #836fff
+grey #C7C8CC
+*/
+
+/* *general settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #FEFEFE;
+}
+
+/* *HOMEPAGE*/
+/*navbar*/
+ul.navbar-nav {
+    flex-direction: row;
+    gap: 1.8em;
+}
+
+h3 span {
+  color: #09b1c8;
+  font-weight: 700;
+  font-style: normal;
+}
+
+nav.navbar a.navbar-brand img {
+    width: 8em;
+}
+
+li a:hover {
+    text-decoration: overline;
+    text-decoration-color: #C7C8CC;
+}
+
+[href = "backoffice.html"]  {
+    color: #09b1c8 !important;
+}
+
+[href = "backoffice.html"]:hover {
+    text-decoration: overline;
+    text-decoration-color: #09b1c8;
+}
+
+div.header-image {
+    background-image: url('https://bit.ly/4bGa4ap');
+    background-position: top;
+    background-size: cover;
+    height: 75vh;
+}
+
+/*! @keyframes upDown { sistema
+  0% {translateY(0)}
+  30% {translate: 1em}
+  50% {translate: 1.5em}
+  70% {translate: 1em}
+  100% {translate: 0}
+}
+
+a[href="#prodottiDisponibili"] {
+  color: #09b1c8;
+  animation: upDown 0.5s;
+} */
+
+/*card*/
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ellipsis {
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 2; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+
+.hover-zoom:hover {
+  transition: transform 0.4s ease-in-out;
+  transform: scale(105%)
+}
+
+a.product-page-link {
+  color: #09b1c8;
+}
+
+img.card-img-top {
+  padding: 1em;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*FOOTER*/
+.footer-background {
+  background-color: #09b1c8;
+}
+
+
+/* *BACKOFFICE PAGE*/
+/*product table*/
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modify-button {
+    border: solid #0079FF;
+    border-radius: 5px;
+    background-color: #0079FF;
+    color: #FEFEFE;
+}
+
+.modify-button:hover {
+  color:#C7C8CC;
+}
+
+.delete-button {
+    border: solid #FE0000;
+    border-radius: 5px;
+    background-color: #FE0000;
+    color: #FEFEFE;
+}
+
+.delete-button:hover {
+  color:#C7C8CC;
+}
+
+.create-button {
+    border: solid #65B741;
+    border-radius: 5px;
+    background-color: #65B741;
+    color: #FEFEFE;
+}
+
+.create-button:hover {
+  color:#C7C8CC;
+}
+
+div.alert.alert-success {
+  background-color: #64b74195;
+}
+
+div.alert-danger {
+  background-color: #FE0000;
+}
+
+/* *DETAILS PAGE*/
+/*navbar*/
+div.header-details-image {
+  background-image: url('https://bit.ly/4bGa4ap');
+  background-position: top;
+  background-size: cover;
+  height: 20vh;
+}
+
+/*spinner*/
+#loadingSpinner {
+  color: #09b1c8;
+}

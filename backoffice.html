@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e5a2b2fa25.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Area</title>
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-light border-bottom">
+        <div class="container-fluid">
+            <a class= "navbar-brand" href="#">
+                <img src="image/logo_black.png" alt="Logo_Marketplace" class="img-fluid">
+            </a>
+            <ul class="navbar-nav pe-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Prodotti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="backoffice.html">Admin Area</a>
+                </li>
+            </ul>
+        </div>
+    </nav>        
+<!--end-->
+
+    <!--INPUT CREATE PRODUCT-->
+    <div class="container mt-5">
+
+            <button class="create-button p-2 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#addProduct" aria-expanded="false" aria-controls="addProduct">
+                Aggiungi prodotto<i class="fa-solid fa-square-plus fa-lg ps-2"></i>
+            </button>
+            <div class="alert alert-success p-2 d-none" role="alert" id="newProductAdded">
+                Il tuo nuovo prodotto è stato aggiunto!
+            </div>
+            <div class="alert alert-danger p-2 d-none" role="alert" id="noProductAdded">
+                Uno o più campi risultano incompleti!
+            </div>
+
+            <div class="collapse mb-3" id="addProduct">
+                <div class="card card-body">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="productName" class="form-label">Nome:</label>
+                            <input type="text" class="form-control" id="productName">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="productBrand" class="form-label">Marca:</label>
+                            <input type="text" class="form-control" id="productBrand">
+                        </div>
+                        <div class="col-12">
+                            <label for="productDescription" class="form-label">Descrizione:</label>
+                            <input type="text" class="form-control" id="productDescription" placeholder="Fornisci qualche dettaglio in più sul tuo prodotto...">
+                        </div>
+                        <div class="col-12">
+                            <label for="productImageUrl" class="form-label">URL immagine:</label>
+                            <input type="text" class="form-control" id="productImageUrl" placeholder="https://...">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="productPrice" class="form-label">Prezzo:</label>                            
+                            <input type="number" class="form-control" id="productPrice" name="price" min="5" max="100000">
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="create-button p-2" id="saveNewProduct">Salva</button>
+                            <button type="button" class="delete-button p-2" data-bs-toggle="collapse" data-bs-target="#addProduct">Chudi</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+<!--end-->
+
+    <!--TITOLO SEZIONE MODIFICA PRODOTTI-->
+    <div class="container text-center">
+        <h5 class="my-4">Tutti i prodotti disponibili:</h5>
+    </div>
+<!--end-->
+
+    <!--ALERT-->
+    <div class="container">
+       <div class="alert alert-success p-2 d-none" role="alert" id="productModified">
+        </div>
+        <div class="alert alert-danger p-2 d-none" role="alert" id="noProductModified">
+        </div> 
+        <div class="alert alert-success p-2 d-none" role="alert" id="ProductDeleted">
+        </div> 
+    </div>    
+<!--end-->
+
+
+    <!--TABLE-->
+    <div class="container">
+        <ul class="list-group" id="listOfProducts">            
+        </ul>
+    </div>        
+<!--end-->
+
+
+    <script src="script_backoffice.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
